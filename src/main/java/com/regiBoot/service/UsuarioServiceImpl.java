@@ -28,4 +28,9 @@ public class UsuarioServiceImpl implements UsuarioService{
     public Usuario getUserByID(Long id) {
         return usuarioDAO.getUserById(id);
     }
+
+    @Override
+    public boolean deleteUserById(Long id) {
+        return usuarioDAO.deleteUserById(id);
+    }
 }

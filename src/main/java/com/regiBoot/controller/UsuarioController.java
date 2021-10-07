@@ -35,4 +35,14 @@ public class UsuarioController {
         Usuario usuario = usuarioService.getUserByID(id);
         return ResponseEntity.ok(usuario);
     }
+
+    @DeleteMapping("/usuario/{id}")
+    public ResponseEntity<String> deleteUserById(@PathVariable("id") Long id){
+        boolean result = usuarioService.deleteUserById(id);
+        if(result)
+            return ResponseEntity.ok("Usuário Deletado Com Sucesso!!!");
+        else {
+            return ResponseEntity.status(HttpStatus.BAD_REQUEST).build();
+        }
+    }
 }

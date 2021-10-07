@@ -11,4 +11,6 @@ public interface UsuarioService {
     List<Usuario> listarUsuarios();
 
     Usuario getUserByID(Long id);
+
+    boolean deleteUserById(Long id);
 }

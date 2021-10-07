@@ -10,4 +10,6 @@ public interface UsuarioDAO {
     List<Usuario> listarUsarios();
 
     Usuario getUserById(Long id);
+
+    boolean deleteUserById(Long id);
 }
