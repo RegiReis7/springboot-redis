@@ -9,4 +9,6 @@ public interface UsuarioService {
     boolean saveUser(Usuario usuario);
 
     List<Usuario> listarUsuarios();
+
+    Usuario getUserByID(Long id);
 }

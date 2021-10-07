@@ -8,4 +8,6 @@ public interface UsuarioDAO {
     boolean saveUser(Usuario usuario);
 
     List<Usuario> listarUsarios();
+
+    Usuario getUserById(Long id);
 }

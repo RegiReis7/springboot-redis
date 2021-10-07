@@ -35,4 +35,14 @@ public class UsuarioDAOImpl implements UsuarioDAO {
             return null;
         }
     }
+
+    @Override
+    public Usuario getUserById(Long id) {
+        try {
+            return (Usuario) redisTemplate.opsForHash().get(KEY, id.toString());
+        }catch (Exception e){
+            e.printStackTrace();
+            return null;
+        }
+    }
 }

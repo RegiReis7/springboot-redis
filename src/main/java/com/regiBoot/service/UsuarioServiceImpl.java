@@ -23,4 +23,9 @@ public class UsuarioServiceImpl implements UsuarioService{
     public List<Usuario> listarUsuarios() {
         return usuarioDAO.listarUsarios();
     }
+
+    @Override
+    public Usuario getUserByID(Long id) {
+        return usuarioDAO.getUserById(id);
+    }
 }
