@@ -45,4 +45,15 @@ public class UsuarioDAOImpl implements UsuarioDAO {
             return null;
         }
     }
+
+    @Override
+    public boolean deleteUserById(Long id) {
+        try {
+            redisTemplate.opsForHash().delete(KEY, id.toString());
+            return true;
+        }catch (Exception e){
+            e.printStackTrace();
+            return false;
+        }
+    }
 }
